@@ -258,6 +258,31 @@
         "cells": [
           {
             "position": {
+              "x": 1092.25,
+              "y": 150.00000000000023
+            },
+            "size": {
+              "width": 200,
+              "height": 580
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Trust Boundry"
+              }
+            },
+            "id": "795b27fd-1332-4ec3-b64e-634813d7fdb3",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundry",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 220,
               "y": 200
             },
@@ -277,8 +302,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "cd871f9f-e779-43be-9ab0-7848ab02e615",
             "zIndex": 1,
+            "id": "cd871f9f-e779-43be-9ab0-7848ab02e615",
             "data": {
               "type": "tm.Flow",
               "name": "Alovoa Client App",
@@ -315,8 +340,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "fa3b57b5-cd7d-463d-a459-8db00bd2e6b5",
             "zIndex": 2,
+            "id": "fa3b57b5-cd7d-463d-a459-8db00bd2e6b5",
             "data": {
               "type": "tm.Flow",
               "name": "OAuth Server",
@@ -353,17 +378,21 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "66675718-6a5c-4716-88ad-fa2a4cd4cd85",
             "zIndex": 3,
+            "id": "66675718-6a5c-4716-88ad-fa2a4cd4cd85",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.Flow",
               "name": "Alovoa Server",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
               "hasOpenThreats": false,
-              "threats": []
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
             }
           },
           {
@@ -386,7 +415,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Request Access token",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "isBidirectional": false,
@@ -397,45 +426,570 @@
               "hasOpenThreats": false,
               "threats": []
             },
-            "id": "5a98db93-3a0a-448a-b142-634b84316b5d",
+            "id": "ac35f239-0f87-421a-b750-9c156aee3783",
             "source": {
-              "x": 320,
+              "x": 650,
+              "y": 249
+            },
+            "target": {
+              "x": 340,
+              "y": 250
+            },
+            "labels": [
+              "2. Return token"
+            ],
+            "vertices": [
+              {
+                "x": 480,
+                "y": 249
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "3. Request resource",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "f5ca9a6b-1046-45ef-819f-d08c449cc00f",
+                  "title": "Client requst resource from server",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Identifiability",
+                  "description": "The use of third-party identity providers may make users more easily identifiable, especially if the identity provider collects or shares detailed user information.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "c2a12596-207b-4013-9fe6-287f3dc1c780",
+            "source": {
+              "x": 265,
+              "y": 260
+            },
+            "target": {
+              "x": 1130,
+              "y": 250
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 320
+              }
+            ],
+            "labels": [
+              "3. Request resource"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "2f327f6a-ff7a-4f28-92cc-530db4137ab2",
+            "source": {
+              "x": 767,
+              "y": 226
+            },
+            "target": {
+              "x": 1130,
+              "y": 230
+            },
+            "labels": [
+              "4. Validate token"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "5. Return resource",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "37caf72b-ffeb-4c01-8981-3b23efd2f53f",
+                  "title": "OAuth login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Linkability",
+                  "description": "When users sign up using third-party identity providers, there is a potential for increased linkability of user activities across multiple services due to the shared use of a common identity provider.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "9304e799-1e16-4e4f-9c8c-9336eb382568",
+            "source": {
+              "x": 1170,
+              "y": 200
+            },
+            "target": {
+              "x": 280,
+              "y": 200
+            },
+            "vertices": [
+              {
+                "x": 700,
+                "y": 100
+              }
+            ],
+            "labels": [
+              "5. Return resource"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "bd1a12a2-0396-471d-906b-6ae2fcba287b",
+            "source": {
+              "x": 1185,
+              "y": 260
+            },
+            "target": {
+              "cell": "04a89f9c-2a46-49b0-8717-42ce55725b88"
+            },
+            "vertices": [
+              {
+                "x": 1185,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "256ea4af-bf47-4c74-992b-4208f607f840",
+            "source": {
+              "x": 1190,
+              "y": 460
+            },
+            "target": {
+              "x": 1190,
+              "y": 640
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "P2P traffic",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "8830da84-796f-4671-ad22-0aded0ce597d",
+                  "title": "Token leak",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Detectability",
+                  "description": "If the authentication tokens or user identifiers are exposed, it could make user accounts detectable by unauthorized parties.\n\n",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "c2b013a2-12e3-47ff-a87e-d2b444beaaf8",
+            "source": {
+              "x": 1249,
+              "y": 236
+            },
+            "target": {
+              "x": 1590,
+              "y": 240
+            },
+            "labels": [
+              "P2P traffic"
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "threats": []
+            },
+            "id": "d993e397-48a9-40a2-b018-c1afae5d56fc",
+            "source": {
+              "x": 130,
+              "y": 50
+            },
+            "target": {
+              "x": 270,
+              "y": 470
+            },
+            "vertices": [
+              {
+                "x": 390,
+                "y": 70
+              },
+              {
+                "x": 390,
+                "y": 200
+              },
+              {
+                "x": 430,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "1. Request Access token",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "dae92d05-04d9-42f5-a8a3-3b3f72dfc9d7",
+                  "title": "New LINDDUN threat",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Disclosure of information",
+                  "description": "If the authentication tokens or user identifiers are exposed, it could make user accounts detectable by unauthorized parties.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "5a98db93-3a0a-448a-b142-634b84316b5d",
+            "labels": [
+              "1. Request Access token"
+            ],
+            "source": {
+              "x": 340,
               "y": 220
             },
             "target": {
-              "x": 650,
+              "x": 640,
               "y": 220
             },
-            "labels": [
-              "Request Access token"
-            ],
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead"
-              ],
-              "name": null
-            },
             "vertices": []
+          },
+          {
+            "position": {
+              "x": 1132.25,
+              "y": 642
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Store token"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "f5f02001-1a16-4740-87d5-e53c3f376fd0",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Store token",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 1137.25,
+              "y": 340
+            },
+            "size": {
+              "width": 110,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Process token"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "04a89f9c-2a46-49b0-8717-42ce55725b88",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "Process token",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 1594,
+              "y": 200
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Internet"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "b8d9b8dc-f566-4885-9976-fa12ff2ca072",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Internet",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
           }
         ]
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 10
   }
 }
