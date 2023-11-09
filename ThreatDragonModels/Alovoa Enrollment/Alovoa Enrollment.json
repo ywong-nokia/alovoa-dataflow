@@ -1000,7 +1000,154 @@
         "placeholder": "New LINDDUN diagram description",
         "thumbnail": "./public/content/images/thumbnail.linddun.jpg",
         "version": "2.1.1",
-        "cells": [],
+        "cells": [
+          {
+            "position": {
+              "x": 29.999999999999602,
+              "y": 30.00000000000105
+            },
+            "size": {
+              "width": 240,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Alovoa client"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "e590a269-464b-44c3-836c-9100f79105f4",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Alovoa client",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 719.9999999999998,
+              "y": 35.00000000000105
+            },
+            "size": {
+              "width": 240,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Internet/local network"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "583dbd1a-388f-4bbf-b146-28ca289abd6b",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Internet/local network",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": true,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": true
+            },
+            "id": "946f1c22-7fd8-4800-b887-d3f091cfe25f",
+            "source": {
+              "x": 270,
+              "y": 95
+            },
+            "target": {
+              "x": 720,
+              "y": 90
+            },
+            "labels": [
+              "Internet/local network"
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "f940fd8a-963d-41e9-be29-212cd595581a",
+            "source": {
+              "x": 310,
+              "y": 10
+            },
+            "target": {
+              "x": 110,
+              "y": 290
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 190
+              }
+            ]
+          }
+        ],
         "description": "Describe how user data flow between the client and the server"
       }
     ],
