@@ -1277,18 +1277,12 @@
               "y": 95
             },
             "target": {
-              "x": 720,
-              "y": 90
+              "cell": "583dbd1a-388f-4bbf-b146-28ca289abd6b"
             },
             "labels": [
               "Internet/local network"
             ],
-            "vertices": [
-              {
-                "x": 460,
-                "y": 95
-              }
-            ]
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -1338,16 +1332,16 @@
             },
             "id": "f82a62cc-f3ab-4e53-81d2-f5132c7adafb",
             "source": {
-              "x": 960,
-              "y": 95
+              "x": 1000,
+              "y": 100
             },
             "target": {
-              "x": 1540,
+              "x": 1550,
               "y": 90
             },
             "vertices": [
               {
-                "x": 1350,
+                "x": 1370,
                 "y": 95
               }
             ],
