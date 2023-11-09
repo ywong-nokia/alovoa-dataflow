@@ -1308,7 +1308,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1323,31 +1324,48 @@
             "zIndex": 10,
             "connector": "smooth",
             "data": {
-              "type": "tm.Boundary",
-              "name": "Internet/local network",
-              "description": "Data transmission between client and server. e.g. create profile, adding picture, making likes.",
+              "type": "tm.Flow",
+              "name": "User data store/retrieval",
+              "description": "The communication between client and server. The server may be on the internet or local network.",
               "outOfScope": false,
               "isBidirectional": true,
               "reasonOutOfScope": "",
               "protocol": "",
               "isEncrypted": false,
-              "isPublicNetwork": true,
-              "hasOpenThreats": false,
-              "threats": [],
-              "isTrustBoundary": true
+              "isPublicNetwork": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "80fc4930-a8c1-4abc-b763-846e22142c6f",
+                  "title": "Communication between client and server",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Detectability",
+                  "description": "Most internet traffic only encrypt application data. Other metadata such as port number, ip, mac address are in the clear. In particular, the the user uses a local server then there is no guarantee the  communication is encrypted.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                }
+              ]
             },
-            "id": "946f1c22-7fd8-4800-b887-d3f091cfe25f",
+            "id": "e75574ac-0cce-4f77-afe1-4b2c306ef76b",
             "source": {
-              "x": 270,
-              "y": 100
+              "cell": "e590a269-464b-44c3-836c-9100f79105f4"
             },
             "target": {
-              "cell": "583dbd1a-388f-4bbf-b146-28ca289abd6b"
+              "cell": "a504580f-a3fa-4805-aa9b-164f925ca3be"
             },
-            "labels": [
-              "Internet/local network"
+            "vertices": [
+              {
+                "x": 440,
+                "y": 100
+              }
             ],
-            "vertices": []
+            "labels": [
+              "User data store/retrieval"
+            ]
           },
           {
             "position": {
@@ -1513,6 +1531,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 19
+    "threatTop": 20
   }
 }
