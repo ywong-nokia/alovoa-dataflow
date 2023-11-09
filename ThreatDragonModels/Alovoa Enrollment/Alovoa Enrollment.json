@@ -1035,8 +1035,8 @@
                 "text": "Alovoa client"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1047,12 +1047,26 @@
             "data": {
               "type": "tm.Actor",
               "name": "Alovoa client",
-              "description": "",
+              "description": "The phone app or web app",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": false,
-              "threats": []
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "3bac7068-9ebb-48b6-ae1a-789b24e4e495",
+                  "title": "Improperly discard data",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Unawareness",
+                  "description": "Data Residue: Information that users believe they have deleted may still reside in hidden files or memory spaces on their devices.\n\nCache Files: Many applications store data in cache files, which may not be properly cleared even after a user believes they have deleted their data.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1066,11 +1080,11 @@
             },
             "attrs": {
               "text": {
-                "text": "Internet/local network"
+                "text": "Public/local server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1080,64 +1094,32 @@
             "zIndex": 2,
             "data": {
               "type": "tm.Flow",
-              "name": "Internet/local network",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "providesAuthentication": false,
-              "hasOpenThreats": false,
-              "threats": [],
-              "isBidirectional": true,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "b2ea817f-2cf9-401e-b051-bcb9bcf7d508",
+                  "title": "Processing data improperly",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Non-compliance",
+                  "description": "The server's failure to comply with data protection laws, such as GDPR for European users, can result in legal and privacy issues.",
+                  "mitigation": "Adhere to privacy regulations and conduct regular audits to maintain compliance across all aspects of the network and servers.",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
               "isPublicNetwork": false
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Internet/local network",
-              "description": "Data transmission between client and server. e.g. create profile, adding picture. making likes.",
-              "outOfScope": false,
-              "isBidirectional": true,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "hasOpenThreats": false,
-              "threats": [],
-              "isTrustBoundary": true
-            },
-            "id": "946f1c22-7fd8-4800-b887-d3f091cfe25f",
-            "source": {
-              "x": 270,
-              "y": 95
-            },
-            "target": {
-              "x": 720,
-              "y": 90
-            },
-            "labels": [
-              "Internet/local network"
-            ],
-            "vertices": []
           },
           {
             "shape": "trust-broundary-curve",
@@ -1258,6 +1240,122 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet/local network",
+              "description": "Data transmission between client and server. e.g. create profile, adding picture. making likes.",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": true
+            },
+            "id": "946f1c22-7fd8-4800-b887-d3f091cfe25f",
+            "source": {
+              "x": 270,
+              "y": 95
+            },
+            "target": {
+              "x": 720,
+              "y": 90
+            },
+            "labels": [
+              "Internet/local network"
+            ],
+            "vertices": [
+              {
+                "x": 460,
+                "y": 95
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Internet",
+              "description": "Data will have to be transmitted to make matches",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "bf9e9edd-afdd-4463-b307-6b04352149bd",
+                  "title": "Publish data on P2P network",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Non-repudiation",
+                  "description": "Once data is submitted to the network and replicated across P2P nodes, users may not be able to repudiate the content they've shared, as it might be impossible to ensure all copies are deleted.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "f82a62cc-f3ab-4e53-81d2-f5132c7adafb",
+            "source": {
+              "x": 960,
+              "y": 95
+            },
+            "target": {
+              "x": 1540,
+              "y": 90
+            },
+            "vertices": [
+              {
+                "x": 1350,
+                "y": 95
+              }
+            ],
+            "labels": [
+              "Internet"
+            ]
+          },
+          {
             "position": {
               "x": 729.9999999999998,
               "y": 295
@@ -1306,11 +1404,13 @@
                 "text": "Data storage"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1328,10 +1428,88 @@
               "storesCredentials": false,
               "isEncrypted": false,
               "isSigned": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "dc74d134-3e21-4c4c-a310-df4f852280a6",
+                  "title": "Storing data on someone else's computer",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Identifiability",
+                  "description": "Storing detailed profiles with pictures, descriptions, and audio can lead to the direct identification of individuals.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "c0a0e364-3dee-4788-b279-d72ad06b6a08",
+                  "title": "Backup data, decrypt later.",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Disclosure of information",
+                  "description": "Even if data are stored in encrypted form, advance in cryptography can break old cryptographic protocols.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "74c9656b-4573-4dc2-9819-65c2af60c252",
+                  "title": "Data loss",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Non-compliance",
+                  "description": "In a P2P network, there is no guarantee whether data can always be retrieved. There is no central party responsible for data comlpiance.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 1555,
+              "y": 30.00000000000105
+            },
+            "size": {
+              "width": 210,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Peer server"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "00ebff0b-dca7-43c0-bca2-38f0632220ce",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Peer server",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
               "hasOpenThreats": false,
               "threats": [],
               "isBidirectional": false,
               "protocol": "",
+              "isEncrypted": false,
               "isPublicNetwork": false
             }
           }
@@ -1341,6 +1519,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 12
+    "threatTop": 19
   }
 }
