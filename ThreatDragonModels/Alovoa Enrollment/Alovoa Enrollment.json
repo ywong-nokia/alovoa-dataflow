@@ -11,7 +11,7 @@
     "diagrams": [
       {
         "id": 0,
-        "title": "Email login",
+        "title": "Email login w/o 2FA",
         "diagramType": "LINDDUN",
         "placeholder": "New LINDDUN diagram description",
         "thumbnail": "./public/content/images/thumbnail.linddun.jpg",
