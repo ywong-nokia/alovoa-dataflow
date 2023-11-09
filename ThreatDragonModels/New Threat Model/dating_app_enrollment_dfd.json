@@ -1,0 +1,129 @@
+{
+    "summary": {
+        "title": "Dating App Enrollment Phase",
+        "owner": "App Owner",
+        "description": "Threat model for the enrollment phase of a dating app.",
+        "reviewers": [],
+        "threats": []
+    },
+    "detail": {
+        "contributors": [
+            "Contributor 1",
+            "Contributor 2"
+        ],
+        "diagrams": [
+            {
+                "title": "Enrollment Phase",
+                "diagramType": "DFD",
+                "diagramJson": {
+                    "cells": [
+                        {
+                            "type": "tm.ExternalEntity",
+                            "attrs": {
+                                "text": {
+                                    "text": "User"
+                                }
+                            }
+                        },
+                        {
+                            "type": "tm.ExternalEntity",
+                            "attrs": {
+                                "text": {
+                                    "text": "Email Service"
+                                }
+                            }
+                        },
+                        {
+                            "type": "tm.Process",
+                            "attrs": {
+                                "text": {
+                                    "text": "Enrollment Process"
+                                }
+                            }
+                        },
+                        {
+                            "type": "tm.Store",
+                            "attrs": {
+                                "text": {
+                                    "text": "User Database"
+                                }
+                            }
+                        },
+                        {
+                            "type": "tm.Flow",
+                            "source": {
+                                "id": "User"
+                            },
+                            "target": {
+                                "id": "Enrollment Process"
+                            },
+                            "labels": [
+                                {
+                                    "attrs": {
+                                        "text": {
+                                            "text": "User Personal Data"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tm.Flow",
+                            "source": {
+                                "id": "Enrollment Process"
+                            },
+                            "target": {
+                                "id": "Email Service"
+                            },
+                            "labels": [
+                                {
+                                    "attrs": {
+                                        "text": {
+                                            "text": "Verification Request"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tm.Flow",
+                            "source": {
+                                "id": "Email Service"
+                            },
+                            "target": {
+                                "id": "User"
+                            },
+                            "labels": [
+                                {
+                                    "attrs": {
+                                        "text": {
+                                            "text": "Verification Email"
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "tm.Boundary",
+                            "attrs": {
+                                "text": {
+                                    "text": "App Boundary"
+                                }
+                            },
+                            "children": [
+                                {
+                                    "type": "tm.Process",
+                                    "id": "Enrollment Process"
+                                },
+                                {
+                                    "type": "tm.Store",
+                                    "id": "User Database"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
