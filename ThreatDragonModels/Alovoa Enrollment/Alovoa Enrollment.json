@@ -247,9 +247,18 @@
             }
           }
         ]
+      },
+      {
+        "id": 1,
+        "title": "OAuth login",
+        "diagramType": "LINDDUN",
+        "placeholder": "New LINDDUN diagram description",
+        "thumbnail": "./public/content/images/thumbnail.linddun.jpg",
+        "version": "2.1.1",
+        "cells": []
       }
     ],
-    "diagramTop": 1,
+    "diagramTop": 2,
     "reviewer": "",
     "threatTop": 6
   }
