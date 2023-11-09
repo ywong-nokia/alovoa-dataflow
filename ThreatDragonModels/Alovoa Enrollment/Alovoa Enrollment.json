@@ -38,8 +38,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "bed277f8-726f-4614-a450-a557c97a9eb4",
             "zIndex": 1,
+            "id": "bed277f8-726f-4614-a450-a557c97a9eb4",
             "data": {
               "type": "tm.Flow",
               "name": "Alovoa app",
@@ -135,52 +135,6 @@
             }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isBidirectional": true,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "hasOpenThreats": false,
-              "threats": []
-            },
-            "id": "71ffa02d-50ce-43b3-895a-d1fcc050490a",
-            "source": {
-              "cell": "bed277f8-726f-4614-a450-a557c97a9eb4"
-            },
-            "target": {
-              "x": 510,
-              "y": 450
-            },
-            "vertices": [
-              {
-                "x": 450,
-                "y": 420
-              }
-            ]
-          },
-          {
             "shape": "trust-broundary-curve",
             "width": 200,
             "height": 100,
@@ -194,6 +148,9 @@
               "hasOpenThreats": false
             },
             "id": "729ca07e-1807-4a16-be9f-b9685d314843",
+            "labels": [
+              "HTTPS"
+            ],
             "source": {
               "x": 80,
               "y": 389
@@ -207,9 +164,56 @@
                 "x": 450,
                 "y": 360
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login request",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "c3c72e57-ddd4-4468-9e4c-706c4a4f6cb7",
+            "source": {
+              "x": 223,
+              "y": 320
+            },
+            "target": {
+              "x": 510,
+              "y": 500
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 500
+              }
             ],
             "labels": [
-              "HTTPS"
+              "Login request"
             ]
           },
           {
@@ -233,8 +237,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "eb793cbe-2102-4f5d-9a97-14836f02679d",
             "zIndex": 11,
+            "id": "eb793cbe-2102-4f5d-9a97-14836f02679d",
             "data": {
               "type": "tm.Actor",
               "name": "Alovoa server",
