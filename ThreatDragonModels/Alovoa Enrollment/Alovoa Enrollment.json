@@ -16,11 +16,241 @@
         "placeholder": "New LINDDUN diagram description",
         "thumbnail": "./public/content/images/thumbnail.linddun.jpg",
         "version": "2.1.1",
-        "cells": []
+        "cells": [
+          {
+            "position": {
+              "x": 80,
+              "y": 170
+            },
+            "size": {
+              "width": 320,
+              "height": 150
+            },
+            "attrs": {
+              "text": {
+                "text": "Alovoa app"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "bed277f8-726f-4614-a450-a557c97a9eb4",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Alovoa app",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "50489504-d506-407e-bb06-b8a52fb5c30a",
+                  "title": "2FA not used for email login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Linkability",
+                  "description": "Without 2FA, malicious actors who gain access to a user's credentials could more easily link the user's activities across different sessions or platforms. If the same credentials are used elsewhere, it becomes easier to link these separate accounts to the same individual, leading to a broader compromise of the user's digital identity.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "ce62b1bf-9484-48b8-914a-0ddb9833c447",
+                  "title": "2FA not used for email login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Identifiability",
+                  "description": "The threat to identifiability increases as stolen credentials can directly identify the user without the added layer of security 2FA provides. With just the password, an attacker can impersonate and identify as the user, accessing sensitive profile information that may include real names, addresses, or other personal data.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "8bee189e-11ef-4e6a-be01-68f4d2bc120a",
+                  "title": "2FA not used for email login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Non-repudiation",
+                  "description": "If an attacker performs actions using a compromised account, the legitimate user may have a hard time proving they were not the one performing those actions due to the lack of 2FA verification.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "4a327466-7625-456d-8574-9c84bad28b0f",
+                  "title": "2FA not used for email login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Detectability",
+                  "description": "Without 2FA, unauthorized access to an account may go undetected longer, as there's no secondary verification method to alert the user or system to suspicious activity. For instance, a user logging in from an unknown device or location would be a trigger for additional verification, which, if not in place, makes unauthorized access less detectable.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "7c42c508-7584-453a-86c3-c6dd6911d08d",
+                  "title": "2FA not used for email login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Disclosure of information",
+                  "description": "A direct consequence of compromised accounts is the unauthorized disclosure of personal information. An attacker with access to a user's account on Alovoa could potentially access or expose private conversations, personal preferences, photos, and other sensitive data designed to be shared only with chosen individuals on the platform.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "365077e8-246b-4c82-8cab-8752c57d6668",
+                  "title": "2FA not used for email login",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Non-compliance",
+                  "description": "This can be a threat if the service operates in jurisdictions where strong authentication methods are required by law for certain types of data processing activities. The lack of 2FA might put the service at risk of non-compliance with such regulations, potentially affecting user trust and legal standing.\n\nIn summary, not implementing 2FA can make users of Alovoa more susceptible to privacy breaches due to increased risks of account takeover and identity theft. It also lessens the ability to detect unauthorized access and could impact legal compliance, depending on regulatory requirements. To mitigate these threats, Alovoa would need to implement 2FA and ensure users are aware of the security measures in place.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "LINDDUN",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "isBidirectional": true,
+              "protocol": "",
+              "isEncrypted": true,
+              "isPublicNetwork": true
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "71ffa02d-50ce-43b3-895a-d1fcc050490a",
+            "source": {
+              "cell": "bed277f8-726f-4614-a450-a557c97a9eb4"
+            },
+            "target": {
+              "x": 510,
+              "y": 450
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 420
+              }
+            ]
+          },
+          {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "HTTPS",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "729ca07e-1807-4a16-be9f-b9685d314843",
+            "source": {
+              "x": 80,
+              "y": 389
+            },
+            "target": {
+              "x": 500,
+              "y": 40
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 360
+              }
+            ],
+            "labels": [
+              "HTTPS"
+            ]
+          },
+          {
+            "position": {
+              "x": 520,
+              "y": 380
+            },
+            "size": {
+              "width": 390,
+              "height": 180
+            },
+            "attrs": {
+              "text": {
+                "text": "Alovoa server"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "eb793cbe-2102-4f5d-9a97-14836f02679d",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Alovoa server",
+              "description": "User Management: Handles user account creation, authentication, profile management, and privacy settings.\nMatchmaking Logic: Implements the algorithm to match users based on their profile details and preferences. This could include filtering by age, interests, location, and other criteria users specify in their profiles.\nMessaging System: Manages in-app messaging between users, allowing for private and secure communication.\nContent Moderation: Provides tools and processes for moderating user-generated content to prevent abuse, such as uploading inappropriate content or sending harassing messages.\nSecurity Features: Implements security measures to protect user data, including encrypted communications and data storage, although as noted, it might currently lack two-factor authentication.\nData Storage: Maintains databases to store user data, match histories, messages, and other necessary information for the application's operation.\nInterface Rendering: Delivers the content to the user's web browser and ensures that the user interface is responsive and up-to-date with the latest information.\nAPI Services: Offers RESTful APIs for the front-end to interact with the server-side operations, such as sending and receiving messages, updating profiles, etc.\nPrivacy Controls: Allows users to set their privacy preferences, determining how much of their information is shared with other users and what is kept private.\nThe server is designed to be self-hosted, meaning that individuals or organizations can run it on their own hardware, giving them complete control over the data and user privacy. The design choice for self-hosting is aligned with growing concerns over personal data use and privacy in online platforms.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "providesAuthentication": false,
+              "hasOpenThreats": false,
+              "threats": []
+            }
+          }
+        ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
