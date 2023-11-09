@@ -250,7 +250,8 @@
               "threats": []
             }
           }
-        ]
+        ],
+        "description": "Describe email login; currently no 2FA support"
       },
       {
         "id": 1,
@@ -989,10 +990,21 @@
               "isPublicNetwork": false
             }
           }
-        ]
+        ],
+        "description": "Describe OAuth login using Google and Facebook"
+      },
+      {
+        "id": 2,
+        "title": "Data storage",
+        "diagramType": "LINDDUN",
+        "placeholder": "New LINDDUN diagram description",
+        "thumbnail": "./public/content/images/thumbnail.linddun.jpg",
+        "version": "2.1.1",
+        "cells": [],
+        "description": "Describe how user data flow between the client and the server"
       }
     ],
-    "diagramTop": 2,
+    "diagramTop": 3,
     "reviewer": "",
     "threatTop": 10
   }
