@@ -1243,51 +1243,6 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": "block"
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "Internet/local network",
-              "description": "Data transmission between client and server. e.g. create profile, adding picture. making likes.",
-              "outOfScope": false,
-              "isBidirectional": true,
-              "reasonOutOfScope": "",
-              "protocol": "",
-              "isEncrypted": false,
-              "isPublicNetwork": true,
-              "hasOpenThreats": false,
-              "threats": [],
-              "isTrustBoundary": true
-            },
-            "id": "946f1c22-7fd8-4800-b887-d3f091cfe25f",
-            "source": {
-              "x": 270,
-              "y": 95
-            },
-            "target": {
-              "cell": "583dbd1a-388f-4bbf-b146-28ca289abd6b"
-            },
-            "labels": [
-              "Internet/local network"
-            ],
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
                 "stroke": "red",
                 "strokeWidth": 2.5,
                 "targetMarker": {
@@ -1348,6 +1303,51 @@
             "labels": [
               "Internet"
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Internet/local network",
+              "description": "Data transmission between client and server. e.g. create profile, adding picture, making likes.",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": true,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isTrustBoundary": true
+            },
+            "id": "946f1c22-7fd8-4800-b887-d3f091cfe25f",
+            "source": {
+              "x": 270,
+              "y": 100
+            },
+            "target": {
+              "cell": "583dbd1a-388f-4bbf-b146-28ca289abd6b"
+            },
+            "labels": [
+              "Internet/local network"
+            ],
+            "vertices": []
           },
           {
             "position": {
