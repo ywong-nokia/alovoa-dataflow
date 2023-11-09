@@ -1003,6 +1003,26 @@
         "cells": [
           {
             "position": {
+              "x": 669.9999999999943,
+              "y": -9.999999999997726
+            },
+            "size": {
+              "width": 330,
+              "height": 760
+            },
+            "shape": "trust-boundary-box",
+            "id": "a504580f-a3fa-4805-aa9b-164f925ca3be",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 29.999999999999602,
               "y": 30.00000000000105
             },
@@ -1093,8 +1113,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "",
-              "description": "",
+              "name": "Internet/local network",
+              "description": "Data transmission between client and server. e.g. create profile, adding picture. making likes.",
               "outOfScope": false,
               "isBidirectional": true,
               "reasonOutOfScope": "",
@@ -1116,7 +1136,8 @@
             },
             "labels": [
               "Internet/local network"
-            ]
+            ],
+            "vertices": []
           },
           {
             "shape": "trust-broundary-curve",
@@ -1146,6 +1167,170 @@
                 "y": 190
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": false,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "447f40b2-275d-46cd-aab7-9a4ca32ea092",
+            "source": {
+              "x": 840,
+              "y": 290
+            },
+            "target": {
+              "x": 840,
+              "y": 160
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data storage/retrieval",
+              "description": "",
+              "outOfScope": false,
+              "isBidirectional": true,
+              "reasonOutOfScope": "",
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "hasOpenThreats": false,
+              "threats": []
+            },
+            "id": "1d17dcf4-4b89-4723-a985-fe16aad4bb9b",
+            "source": {
+              "x": 830,
+              "y": 445
+            },
+            "target": {
+              "x": 830,
+              "y": 590
+            },
+            "labels": [
+              "Data storage/retrieval"
+            ]
+          },
+          {
+            "position": {
+              "x": 729.9999999999998,
+              "y": 295
+            },
+            "size": {
+              "width": 220,
+              "height": 150
+            },
+            "attrs": {
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "24b0e571-c592-417d-86f7-1615c2ac5ae1",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Process",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "privilegeLevel": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isEncrypted": false,
+              "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 720,
+              "y": 587.0000000000002
+            },
+            "size": {
+              "width": 240,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Data storage"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "7a9e945f-6cf6-45ff-baef-7e1b763bb6f6",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data storage",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "isALog": false,
+              "storesCredentials": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "hasOpenThreats": false,
+              "threats": [],
+              "isBidirectional": false,
+              "protocol": "",
+              "isPublicNetwork": false
+            }
           }
         ],
         "description": "Describe how user data flow between the client and the server"
@@ -1153,6 +1338,6 @@
     ],
     "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 10
+    "threatTop": 12
   }
 }
